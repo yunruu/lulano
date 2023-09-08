@@ -4,6 +4,9 @@ import { Inter, Nunito, Nunito_Sans } from "next/font/google";
 import clsx from "clsx";
 import { createClient } from "@/prismicio";
 
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -23,14 +26,15 @@ const nunitoSans = Nunito_Sans({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
-  const client = createClient();
-  const page = await client.getSingle("settings"); // to query single types
+  const client = createClient(); // interact with data from prismicio
+  const settings = await client.getSingle("settings"); // to query single types
 
   return {
-    title: page.data.site_title || "Untitled Site",
-    description: page.data.meta_description || "This site has no descriptions.",
+    title: settings.data.site_title || "Untitled Site",
+    description:
+      settings.data.meta_description || "This site has no descriptions.",
     openGraph: {
-      images: [page.data.og_image.url || ""],
+      images: [settings.data.og_image.url || ""],
     },
   };
 }
@@ -45,9 +49,9 @@ export default function RootLayout({
       <body
         className={clsx(inter.variable, nunito.variable, nunitoSans.variable)}
       >
-        <header>header</header>
+        <Header />
         {children}
-        <footer>footer</footer>
+        <Footer />
       </body>
     </html>
   );
