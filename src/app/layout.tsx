@@ -34,11 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={clsx(
-          inter.className,
-          nunito.className,
-          nunitoSans.className
-        )}
+        className={clsx(inter.variable, nunito.variable, nunitoSans.variable)}
       >
         {children}
       </body>
