@@ -1,4 +1,3 @@
-import { IconContext } from "react-icons";
 import { BiCalendar } from "react-icons/bi";
 
 type IconProps = {
@@ -8,11 +7,9 @@ type IconProps = {
 
 function CalendarIcon({ size = "2em", color = "#000" }: IconProps) {
   return (
-    <IconContext.Provider value={{ className: "global-class-name" }}>
-      <div>
-        <BiCalendar size={size} color={color} />
-      </div>
-    </IconContext.Provider>
+    <div>
+      <BiCalendar size={size} color={color} />
+    </div>
   );
 }
 
