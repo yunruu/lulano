@@ -12,15 +12,15 @@ import {
 const components: JSXMapSerializer = {
   heading1: ({ children }) => (
     <Heading
-      size="md"
       as="h1"
-      className="mb-4 md:mb-8 mt-12 first:mt-0 last:mb-0"
+      size="xl"
+      className="mb-4 md:mb-8 mt-12 first:mt-2 last:mb-0 text-start"
     >
       {children}
     </Heading>
   ),
   paragraph: ({ children }) => (
-    <p className="text-2xl font-normal leading-10 font-body text-center text-slate-600 mb-4 md:mb-8 max-w-md">
+    <p className="text-2xl font-normal leading-10 font-body text-slate-600 mb-4 md:mb-8 max-w-md">
       {children}
     </p>
   ),
@@ -36,25 +36,59 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   return (
-    <OuterBound
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-    >
-      <div className="grid grid-cols-1 place-items-center text-center">
-        <PrismicRichText
-          field={slice.primary.heading}
-          components={components}
-        />
-        <PrismicRichText field={slice.primary.body} components={components} />
-        <LinkButton field={slice.primary.button_link} className="mb-10">
-          {slice.primary.button_text}
-        </LinkButton>
-        <PrismicNextImage
-          field={slice.primary.image}
-          className="drop-shadow-xl max-w-4xl w-full"
-        />
-      </div>
-    </OuterBound>
+    <>
+      {slice.variation === "default" && (
+        <OuterBound
+          data-slice-type={slice.slice_type}
+          data-slice-variation={slice.variation}
+        >
+          <div className="grid grid-cols-1 place-items-center text-center">
+            <PrismicRichText
+              field={slice.primary.heading}
+              components={components}
+            />
+            <PrismicRichText
+              field={slice.primary.body}
+              components={components}
+            />
+            <LinkButton field={slice.primary.button_link} className="mb-10">
+              {slice.primary.button_text}
+            </LinkButton>
+            <PrismicNextImage
+              field={slice.primary.image}
+              className="drop-shadow-xl max-w-4xl w-full"
+            />
+          </div>
+        </OuterBound>
+      )}
+
+      {slice.variation === "horizontalStack" && (
+        <OuterBound
+          data-slice-type={slice.slice_type}
+          data-slice-variation={slice.variation}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
+            <div className="grid grid-rows-[1fr,auto,auto] h-fit">
+              <PrismicRichText
+                field={slice.primary.heading}
+                components={components}
+              />
+              <PrismicRichText
+                field={slice.primary.body}
+                components={components}
+              />
+              <LinkButton field={slice.primary.button_link} className="mb-10">
+                {slice.primary.button_text}
+              </LinkButton>
+            </div>
+            <PrismicNextImage
+              field={slice.primary.image}
+              className="drop-shadow-xl max-w-4xl w-full"
+            />
+          </div>
+        </OuterBound>
+      )}
+    </>
   );
 };
 
