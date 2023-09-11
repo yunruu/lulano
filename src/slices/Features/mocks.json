@@ -9,8 +9,10 @@
 					{
 						"type": "heading2",
 						"content": {
-							"text": "Statement"
-						}
+							"text": "Robust Features",
+							"spans": []
+						},
+						"direction": "ltr"
 					}
 				]
 			}
@@ -36,6 +38,51 @@
 									"type": "heading3",
 									"content": {
 										"text": "Journal",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					],
+					[
+						"description",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Sint sint eu aliqua. Sint sint eu aliqua. Sint sint eu aliqua. Sint sint eu aliqua.",
+										"spans": []
+									},
+									"direction": "ltr"
+								}
+							]
+						}
+					]
+				]
+			},
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"icon",
+						{
+							"__TYPE__": "FieldContent",
+							"type": "Select",
+							"value": "music"
+						}
+					],
+					[
+						"title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "heading3",
+									"content": {
+										"text": "Music",
 										"spans": []
 									},
 									"direction": "ltr"
@@ -126,51 +173,6 @@
 									"type": "heading3",
 									"content": {
 										"text": "Time",
-										"spans": []
-									},
-									"direction": "ltr"
-								}
-							]
-						}
-					],
-					[
-						"description",
-						{
-							"__TYPE__": "StructuredTextContent",
-							"value": [
-								{
-									"type": "paragraph",
-									"content": {
-										"text": "Sint sint eu aliqua. Sint sint eu aliqua. Sint sint eu aliqua. Sint sint eu aliqua.",
-										"spans": []
-									},
-									"direction": "ltr"
-								}
-							]
-						}
-					]
-				]
-			},
-			{
-				"__TYPE__": "GroupItemContent",
-				"value": [
-					[
-						"icon",
-						{
-							"__TYPE__": "FieldContent",
-							"type": "Select",
-							"value": "music"
-						}
-					],
-					[
-						"title",
-						{
-							"__TYPE__": "StructuredTextContent",
-							"value": [
-								{
-									"type": "heading3",
-									"content": {
-										"text": "Music",
 										"spans": []
 									},
 									"direction": "ltr"
