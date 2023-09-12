@@ -42,7 +42,8 @@
           "config": {
             "label": "Button Link",
             "placeholder": "",
-            "select": "media"
+            "allowTargetBlank": false,
+            "select": null
           }
         },
         "image": {
@@ -94,7 +95,7 @@
           "config": {
             "label": "Button Link",
             "placeholder": "",
-            "select": "media"
+            "select": null
           }
         },
         "image": {
