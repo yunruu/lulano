@@ -37,10 +37,10 @@ const components: JSXMapSerializer = {
 };
 
 const icons = {
-  music: <MusicIcon size="3em" color="#6E56CF" />,
-  calendar: <CalendarIcon size="3em" color="#6E56CF" />,
-  chart: <ChartIcon size="3em" color="#6E56CF" />,
-  hourglass: <HourglassIcon size="3em" color="#6E56CF" />,
+  music: <MusicIcon size="3em" color="#0e7490" />,
+  calendar: <CalendarIcon size="3em" color="#0e7490" />,
+  chart: <ChartIcon size="3em" color="#0e7490" />,
+  hourglass: <HourglassIcon size="3em" color="#0e7490" />,
 };
 
 /**

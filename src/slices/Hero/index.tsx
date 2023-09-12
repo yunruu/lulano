@@ -51,10 +51,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
               field={slice.primary.body}
               components={components}
             />
-            <LinkButton
-              field={slice.primary.button_link}
-              className="mb-10 bg-[rgb(110,86,207)]"
-            >
+            <LinkButton field={slice.primary.button_link} className="mb-10">
               {slice.primary.button_text}
             </LinkButton>
             <PrismicNextImage
@@ -86,10 +83,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
                   ),
                 }}
               />
-              <LinkButton
-                field={slice.primary.button_link}
-                className="mb-10 bg-[rgb(110,86,207)]"
-              >
+              <LinkButton field={slice.primary.button_link} className="mb-10">
                 {slice.primary.button_text}
               </LinkButton>
             </div>
