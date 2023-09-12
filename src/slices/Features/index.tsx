@@ -11,7 +11,7 @@ import { CalendarIcon, ChartIcon, HourglassIcon, MusicIcon } from "@/icons";
 const components: JSXMapSerializer = {
   heading2: ({ children }) => {
     return (
-      <Heading as="h2" size="md" className="text-center mb-12">
+      <Heading as="h2" size="md" className="text-center mb-12 md:mb-16">
         {children}
       </Heading>
     );

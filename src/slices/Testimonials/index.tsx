@@ -12,7 +12,11 @@ import {
 const components: JSXMapSerializer = {
   heading2: ({ children }) => {
     return (
-      <Heading as="h2" size="md" className="text-center mb-9 font-semibold">
+      <Heading
+        as="h2"
+        size="md"
+        className="text-center mb-9 md:mb-12 font-semibold"
+      >
         {children}
       </Heading>
     );
