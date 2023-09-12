@@ -52,7 +52,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <div className="fixed bg-gradient-to-tr from-red-100 to-purple-100 z-[-2] inset-0 opacity-40"></div>
+        <div className="fixed bg-gradient-to-tr from-red-100 to-purple-100 z-[-2] inset-0 opacity-20"></div>
       </body>
     </html>
   );
